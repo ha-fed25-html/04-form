@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Formulär </title>
+	<link rel="stylesheet" href="form.css">
+</head>
+<body>
+
+	<h1> Kodsemester </h1>
+
+	<form action="#">
+		<p> Lämna vardagen för att fokusera på kod! </p>
+
+		<div class="form-field">
+			<label for="text-input"> Namn* </label>
+			<input id="text-input"
+				type="text"
+				placeholder="Skriv ditt namn"
+				required
+				value=""
+				/>
+			<p class="error-message"> Du måste skriva in ditt namn för att gå vidare. </p>
+		</div>
+
+		<div class="form-field">
+			<label> Vart vill du resa? </label>
+			<select required>
+				<option> Välj destination </option>
+				<option value="somalia"> Somalia </option>
+				<option value="kongo"> Republiken Kongo </option>
+				<option value="grönland"> Grönland </option>
+				<option value="malmö"> Malmö </option>
+			</select>
+		</div>
+
+		<div class="form-field">
+			<label for="datalist"> Önskat färdmedel </label>
+			<input id="datalist" list="transportation" minlength="2">
+			<datalist id="transportation">
+				<option> Bil </option>
+				<option> Båt </option>
+				<option> Moped </option>
+			</datalist>
+		</div>
+
+		<div class="form-field">
+			<legend> Vilken dag vill du åka? </legend>
+
+			<div class="flex-row">
+				<div class="radio-container">
+					<input id="monday" type="radio" name="days" value="monday">
+					<label for="monday" class="radio"> Måndag </label>
+				</div>
+				<div class="radio-container">
+					<input id="tuesday" type="radio" name="days">
+					<label for="tuesday" class="radio"> Tisdag </label>
+				</div>
+				<div class="radio-container">
+					<input id="wednesday" type="radio" name="days">
+					<label for="wednesday" class="radio"> Onsdag </label>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="form-field">
+			<label for="extra-text"> Övriga önskemål </label>
+			<textarea id="extra-text" rows="5"> Hejsan </textarea>
+		</div>
+
+		<button type="submit" class="cta"> Boka resa </button>
+		<button type="reset"> Rensa formuläret </button>
+
+	</form>
+
+</body>
+</html>
